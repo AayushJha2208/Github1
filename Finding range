@@ -1,0 +1,28 @@
+#include <stdio.h>
+int main()
+{
+    int sz,num=0,bg,sm,rg;
+    printf("size of set: ");
+    scanf("%d",&sz);
+    printf("\nenter no.: ");
+    scanf("%d",&num);
+    bg=sm=num;
+    sz=sz-1;
+    while(sz>0)
+    {
+        printf("\nenter no.: ");
+        scanf("%d",&num);
+        if (num>bg)
+        {
+            bg=num; 
+        }
+        if (num<sm)
+        {
+            sm=num;
+        }
+        sz--;
+    }
+    rg=bg-sm;
+    printf("Range of the set is: %d",rg);
+    return 0;
+}
