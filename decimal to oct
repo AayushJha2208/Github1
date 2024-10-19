@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main()
+{
+    int de,oct,b=0,rm,zc=1;
+    printf("enter the decimal number: ");
+    scanf("%d",&de);
+    while (de>8)
+    {
+        rm=de%8;
+        de=de/8;
+        oct+=rm*zc;
+        zc=zc*10;
+    }
+    oct=oct+de*zc;
+    printf("octal equivalent of the given number is: %d",oct);
+    return 0;
+}
